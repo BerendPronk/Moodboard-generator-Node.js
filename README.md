@@ -3,4 +3,4 @@ My first application build in Node.js
 
 -
 
-This repository is to show you what my code looks like. Unfortunately I do not have a online example to show you.
+This repository is to show you what my code looks like. Unfortunately I do not have a online example where the application is shown.
