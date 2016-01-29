@@ -1,0 +1,31 @@
+<%- include ../partials/header.ejs %>
+
+<section>
+	<h1>Log in met uw gegevens</h1>
+
+	<% if(feedback){ %>
+		<div class="feedback <%= state %>">
+			<%= feedback %>
+		</div>
+	<% } %>
+
+	<form action="<%= postUrl %>" method="post">
+		<label for="field_username">Username:
+			<input type="text" id="field_username" name="username" value="">
+		</label>
+
+		<label for="field_password">Password:
+			<input type="password" id="field_password" name="password" value="">
+		</label>
+
+		<button type="submit">Login!</button>
+	</form>
+
+	<ul class="options">
+		<li><a href="/profile/register">Nog geen account?</a></li>
+	</ul>
+
+	<a class="back" href="/">Terug</a>
+</section>
+
+<%- include ../partials/footer.ejs %>

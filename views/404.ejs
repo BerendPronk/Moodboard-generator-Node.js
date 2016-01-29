@@ -1,0 +1,15 @@
+<%- include partials/header.ejs %>
+
+<section>
+	<h1>404</h1>
+
+	<% if(feedback){ %>
+		<div class="feedback <%= state %>">
+			<%= feedback %>
+		</div>
+	<% } %>
+
+	<a class="back" href="/board">Keer terug het moodboard</a>
+</section>
+
+<%- include partials/footer.ejs %>

@@ -1,0 +1,52 @@
+<%- include ../partials/header.ejs %>
+
+<section id="boardheader">
+	<h1>Jouw moodboard</h1>
+
+	<% if(feedback){ %>
+		<div class="feedback <%= state %>">
+			<%= feedback %>
+		</div>
+	<% } %>
+
+	<div class="account">
+		<a href="/profile"><i class="fa fa-user"></i> <%= user %></a>
+	</div>
+
+	<ul class="options">
+		<li><a href="/board/upload">Upload afbeelding</a></li>
+	</ul>
+</section>
+
+<section id="board">
+	<ul>
+		<% if (images[0].image_path != null) { %>
+			<% for (var i = 0; i < images.length; i++) { %>
+				<li>
+					<ul class="icons">
+						<li>
+							<a href="/uploads/<%= images[i].image_path %>" target="_blank">
+								<i class="fa fa-arrow-down"></i>
+							</a>
+						</li>
+						<li>
+							<a href="/board/remove/<%= images[i].image_ID %>">
+								<i class="fa fa-times"></i>
+							</a>
+						</li>
+					</ul>
+
+					<img src="/uploads/<%= images[i].image_path %>" alt="">
+				</li>
+			<% } %>
+		<% } else { %>
+			<li>Geen afbeeldingen gevonden.</li>
+		<% } %>
+	</ul>
+
+	<% if (images[0].image_path != null) { %>
+		<button onClick="window.print()">Print moodboard</button>
+	<% } %>
+</section>
+
+<%- include ../partials/footer.ejs %>

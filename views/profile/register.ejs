@@ -1,0 +1,31 @@
+<%- include ../partials/header.ejs %>
+
+<section>
+	<h1>Maak een account aan</h1>
+
+	<% if(feedback){ %>
+		<div class="feedback <%= state %>">
+			<%= feedback %>
+		</div>
+	<% } %>
+
+	<form action="<%= postUrl %>" method="post">
+		<label for="field_username">Username:
+			<input type="text" id="field_username" name="username" value="">
+		</label>
+
+		<label for="field_password">Password:
+			<input type="password" id="field_password" name="password" value="">
+		</label>
+
+		<label for="field_password">Repeat password:
+			<input type="password" id="field_passwordcopy" name="passwordcopy" value="">
+		</label>
+
+		<button type="submit">Registreer</button>
+	</form>
+
+	<a class="back" href="/">Terug</a>
+</section>
+
+<%- include ../partials/footer.ejs %>

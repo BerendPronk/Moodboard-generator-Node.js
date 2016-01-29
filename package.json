@@ -1,0 +1,27 @@
+{
+  "name": "serverside-scripting-eindopdracht",
+  "version": "0.0.1",
+  "description": "Eindopdracht van Berend Pronk (500703305) uit V1-04",
+  "private": true,
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "express": "~4.9.0",
+    "ejs": "~0.8.5",
+    "express-session": "~1.9.3",
+    "body-parser": "~1.10.0"
+  },
+  "devDependencies": {},
+  "scripts": {},
+  "keywords": [
+    "exercise1",
+    "serverside",
+    "scripting",
+    "nodejs",
+    "course"
+  ],
+  "author": "Berend Pronk",
+  "license": "MIT"
+}

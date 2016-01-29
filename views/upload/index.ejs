@@ -1,0 +1,18 @@
+<%- include ../partials/header.ejs %>
+
+<section>
+	<h1>Upload afbeeldingen</h1>
+
+	<p>Selecteer uit uw computer of drag-and-drop de afbeelding.</p>
+
+	<form action="<%= req.baseUrl + "/upload" %>" method="POST" enctype="multipart/form-data">
+		<label for="bs-file">File:</label>
+		<input type="file" name="bs-file" id="bs-file" accept="image/*" value="" />
+		<label for="submit"></label>
+		<input type="submit" id="submit" value="Upload" />
+	</form>
+
+	<a class="back" href="/board">Terug</a>
+</section>
+
+<%- include ../partials/footer.ejs %>
